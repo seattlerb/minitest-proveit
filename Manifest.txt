@@ -1,0 +1,7 @@
+.autotest
+History.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+lib/minitest/proveit.rb
+test/test_minitest_proveit.rb

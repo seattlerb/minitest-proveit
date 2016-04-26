@@ -1,0 +1,65 @@
+= minitest-proveit
+
+home :: https://github.com/seattlerb/minitest-proveit
+rdoc :: http://docs.seattlerb.org/minitest-proveit
+
+== DESCRIPTION:
+
+Originally written by github user bradleyjames, minitest-proveit
+ensures that you actually write an assertion in your tests. If you
+don't prove that things are correct, it'll blow up.
+
+== FEATURES/PROBLEMS:
+
+* Activate and run your tests to ensure you have an assertion in each test.
+* Opt-in, for now
+* hooked via minitest/hell.
+* export MT_HELL=1 to enable globally.
+
+== SYNOPSIS:
+
+  class MyTest < Minitest::Test
+    prove_it!
+
+    def test_good
+      MyClass.do_the_thing
+      assert MyClass.did_the_thing_correctly?
+    end
+
+    def test_bad
+      MyClass.do_the_thing              # => test failure
+    end
+  end
+
+== REQUIREMENTS:
+
+* minitest 5+
+
+== INSTALL:
+
+* sudo gem install minitest-proveit
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) Ryan Davis, seattle.rb
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
