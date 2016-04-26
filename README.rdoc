@@ -6,8 +6,8 @@ rdoc :: http://docs.seattlerb.org/minitest-proveit
 == DESCRIPTION:
 
 Originally written by github user bradleyjames, minitest-proveit
-ensures that you actually write an assertion in your tests. If you
-don't prove that things are correct, it'll blow up.
+forces all tests to prove success (via at least one assertion) rather
+than rely on the absence of failure.
 
 == FEATURES/PROBLEMS:
 
